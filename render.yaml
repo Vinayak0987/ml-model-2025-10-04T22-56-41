@@ -1,0 +1,10 @@
+# Render deployment configuration
+services:
+  - type: web
+    name: ml-model-2025-10-04T22-56-41
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python load_model.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
